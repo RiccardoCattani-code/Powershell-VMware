@@ -1,3 +1,4 @@
+
 # Elenco dei nomi delle snapshot da cancellare 
 
 $snapshotNames = @( 
@@ -5,8 +6,6 @@ $snapshotNames = @(
     "RC-WLT-L-AS2_SUPVMW-18059_25-03-2025" 
 
 ) 
-
- 
 
 # Cerca e cancella snapshot con quei nomi 
 
