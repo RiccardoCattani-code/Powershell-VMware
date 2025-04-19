@@ -3,7 +3,7 @@
 
 $snapshotNames = @( 
 
-    "RC-WLT-L-AS2_SUPVMW-18059_25-03-2025" 
+    "ZA-ALC-L-AS2_V-1859_25-03-2025" 
 
 ) 
 
