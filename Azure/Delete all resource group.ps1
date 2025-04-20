@@ -2,7 +2,7 @@
 # WARNING: This action is irreversible. Use with caution.
 
 # Login to Azure
-Connect-AzAccount
+Connect-AzAccount -UseDeviceAuthentication -TenantId 7a475046-0856-478f-b30e-983736def2cd
 
 # Get all resource groups in the subscription
 $resourceGroups = Get-AzResourceGroup
@@ -29,3 +29,4 @@ do {
 }
 
 Write-Host "Tutti i gruppi di risorse sono stati elaborati." -ForegroundColor Green
+
