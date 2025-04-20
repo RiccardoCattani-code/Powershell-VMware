@@ -1,0 +1,79 @@
+{
+    "name": "testvm",
+    "id": "/subscriptions/ebe95d37-01bc-4988-ad84-7887e5cfa866/resourceGroups/TestVM/providers/Microsoft.Compute/virtualMachines/testvm",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "eastus",
+    "properties": {
+        "hardwareProfile": {
+            "vmSize": "Standard_D4s_v3"
+        },
+        "provisioningState": "Succeeded",
+        "vmId": "08b1acc0-b2a3-4fb9-a730-1f8a8ffd1147",
+        "additionalCapabilities": {
+            "hibernationEnabled": false
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "canonical",
+                "offer": "ubuntu-24_04-lts",
+                "sku": "server",
+                "version": "latest",
+                "exactVersion": "24.04.202504080"
+            },
+            "osDisk": {
+                "osType": "Linux",
+                "name": "testvm_OsDisk_1_74466fcd26954a6bb4c28a0e0f82aac6",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "storageAccountType": "Premium_LRS",
+                    "id": "/subscriptions/ebe95d37-01bc-4988-ad84-7887e5cfa866/resourceGroups/TestVM/providers/Microsoft.Compute/disks/testvm_OsDisk_1_74466fcd26954a6bb4c28a0e0f82aac6"
+                },
+                "deleteOption": "Delete",
+                "diskSizeGB": 30
+            },
+            "dataDisks": []
+        },
+        "osProfile": {
+            "computerName": "testvm",
+            "adminUsername": "testvm",
+            "linuxConfiguration": {
+                "disablePasswordAuthentication": false,
+                "provisionVMAgent": true,
+                "patchSettings": {
+                    "patchMode": "ImageDefault",
+                    "assessmentMode": "ImageDefault"
+                }
+            },
+            "secrets": [],
+            "allowExtensionOperations": true,
+            "requireGuestProvisionSignal": true
+        },
+        "securityProfile": {
+            "uefiSettings": {
+                "secureBootEnabled": true,
+                "vTpmEnabled": true
+            },
+            "securityType": "TrustedLaunch"
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/ebe95d37-01bc-4988-ad84-7887e5cfa866/resourceGroups/TestVM/providers/Microsoft.Network/networkInterfaces/testvm290_z1",
+                    "properties": {
+                        "deleteOption": "Detach"
+                    }
+                }
+            ]
+        },
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": true
+            }
+        }
+    },
+    "zones": [
+        "1"
+    ],
+    "apiVersion": "2021-03-01"
+}
