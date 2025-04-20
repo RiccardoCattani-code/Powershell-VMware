@@ -1,6 +1,6 @@
 {
     "name": "testvm",
-    "id": "/subscriptions/ebe95d37-01bc-4988-ad84-7887e5cfa866/resourceGroups/TestVM/providers/Microsoft.Compute/virtualMachines/testvm",
+    "id": "/subscriptions/ebe95d37-01bc-4988-ad84-7887e5cfa866/resourceGroups/testvm_group/providers/Microsoft.Compute/virtualMachines/testvm",
     "type": "Microsoft.Compute/virtualMachines",
     "location": "eastus",
     "properties": {
@@ -8,7 +8,7 @@
             "vmSize": "Standard_D4s_v3"
         },
         "provisioningState": "Succeeded",
-        "vmId": "08b1acc0-b2a3-4fb9-a730-1f8a8ffd1147",
+        "vmId": "dc6db0d8-1609-4079-8113-3900d4919f19",
         "additionalCapabilities": {
             "hibernationEnabled": false
         },
@@ -22,23 +22,29 @@
             },
             "osDisk": {
                 "osType": "Linux",
-                "name": "testvm_OsDisk_1_74466fcd26954a6bb4c28a0e0f82aac6",
+                "name": "testvm_OsDisk_1_fa53da038fa84e46a4d8792c54e955e1",
                 "createOption": "FromImage",
                 "caching": "ReadWrite",
                 "managedDisk": {
-                    "storageAccountType": "Premium_LRS",
-                    "id": "/subscriptions/ebe95d37-01bc-4988-ad84-7887e5cfa866/resourceGroups/TestVM/providers/Microsoft.Compute/disks/testvm_OsDisk_1_74466fcd26954a6bb4c28a0e0f82aac6"
+                    "id": "/subscriptions/ebe95d37-01bc-4988-ad84-7887e5cfa866/resourceGroups/testvm_group/providers/Microsoft.Compute/disks/testvm_OsDisk_1_fa53da038fa84e46a4d8792c54e955e1"
                 },
-                "deleteOption": "Delete",
-                "diskSizeGB": 30
+                "deleteOption": "Delete"
             },
             "dataDisks": []
         },
         "osProfile": {
             "computerName": "testvm",
-            "adminUsername": "testvm",
+            "adminUsername": "azureuser",
             "linuxConfiguration": {
-                "disablePasswordAuthentication": false,
+                "disablePasswordAuthentication": true,
+                "ssh": {
+                    "publicKeys": [
+                        {
+                            "path": "/home/azureuser/.ssh/authorized_keys",
+                            "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMVJv32uUfKCFIL1WxctRjLEtQ6TxzUvNjBCsXoIt9Na+lWTd1cEBCuXcZ3M/XmpDzjCFSYmzgMBRZy4yFERzi2/Qw2ohWyMBQh1gU266suVJGHyNnx1DVufbWpG1mZy3g4P4k2sK2wwW2byF6P6T9YvjZhOXyt50YMtlxgCba1dCEfjy5JmyVQzcQxJP5566Nwab9uKsgI5tjOfnDYvehvUweImfQM7JeazlXcHDkgPaZ21CCiIsSwzziWPTLRhzEX36txLPXtKNDvIzP6+dcnGwqF3yjjVfP/n2gfbOPhhhIlrGrG4SHMx/jqGi7AS5m3GIkk5P2JZhJEiu27Qdq2lH256tU78rPV/6u+p8S2VrxDLZcAUNALGBfIJy/Nd4Q1YcTRe0seKfSdJh4Cn1UQl+OLFLNb8rqM3k5Tybkbs7VOEzG9eQWXV9sRDADoA+hqPPo9Q77R9ZtoQLfup8iQI0Ickb1gox2TFacM9dFKPtn5EyMbL1GEhhgMKxBEDE= generated-by-azure"
+                        }
+                    ]
+                },
                 "provisionVMAgent": true,
                 "patchSettings": {
                     "patchMode": "ImageDefault",
@@ -59,7 +65,7 @@
         "networkProfile": {
             "networkInterfaces": [
                 {
-                    "id": "/subscriptions/ebe95d37-01bc-4988-ad84-7887e5cfa866/resourceGroups/TestVM/providers/Microsoft.Network/networkInterfaces/testvm290_z1",
+                    "id": "/subscriptions/ebe95d37-01bc-4988-ad84-7887e5cfa866/resourceGroups/testvm_group/providers/Microsoft.Network/networkInterfaces/testvm546_z1",
                     "properties": {
                         "deleteOption": "Detach"
                     }
