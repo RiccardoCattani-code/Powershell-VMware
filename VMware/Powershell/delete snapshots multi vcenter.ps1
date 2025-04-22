@@ -12,7 +12,7 @@ $vmListFile = "pathdovesitrovailfile\lista.txt"
 
 # Credenziali per l'accesso ai vCenter
 $username = "adminstrator@vsphere.local"
-$password = "VMw4r3$S3cur3P01nt!"
+$password = "password"
 $securePassword = ConvertTo-SecureString $password -AsPlainText -Force
 $cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $username, $securePassword
 
