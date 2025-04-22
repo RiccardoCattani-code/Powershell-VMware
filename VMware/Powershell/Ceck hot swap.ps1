@@ -20,17 +20,22 @@ $result = @()
 foreach ($entry in $vmData) {
     $vmName = $entry.VMName
     $vcServer = $entry.vCenter
+    $username = $entry.Username
+    $password = $entry.Password
 
-    # Connessione se non già fatta
-    if (-not $connectedVCs.ContainsKey($vcServer)) {
-        try {
-            $vcConnection = Connect-VIServer -Server $vcServer -WarningAction SilentlyContinue
-            $connectedVCs[$vcServer] = $vcConnection
-        } catch {
-            Write-Warning "Impossibile connettersi a $vcServer"
-            continue
-        }
+
+   # Connessione se non già fatta
+   if (-not $connectedVCs.ContainsKey($vcServer)) {
+    try {
+        $securePassword = ConvertTo-SecureString $password -AsPlainText -Force
+        $credential = New-Object System.Management.Automation.PSCredential ($username, $securePassword)
+        $vcConnection = Connect-VIServer -Server $vcServer -Credential $credential -WarningAction SilentlyContinue
+        $connectedVCs[$vcServer] = $vcConnection
+    } catch {
+        Write-Warning "Impossibile connettersi a $vcServer con l'utente $username"
+        continue
     }
+}
 
     # Recupera la VM
     $vm = Get-VM -Name $vmName -Server $connectedVCs[$vcServer] -ErrorAction SilentlyContinue
