@@ -1,7 +1,12 @@
+# Verifica presenza modulo ImportExcel
+if (-not (Get-Module -ListAvailable -Name ImportExcel)) {
+    Write-Error "Il modulo 'ImportExcel' non è installato. Esegui 'Install-Module -Name ImportExcel' per installarlo."
+    exit
+}
 # Assicurati di avere il modulo ImportExcel
 # Install-Module -Name ImportExcel
 # File Excel con colonne: VMName, vCenter
-$excelPath = "\\wp-ctx-fs01\folderredirection$\sqz75768_OURLOTTO\Desktop\vm_list"
+$excelPath = "C:\Users\sqz75768\vm_list"
 
 # Caricamento dati dal file Excel
 $vmData = Import-Excel -Path $excelPath
@@ -47,7 +52,7 @@ foreach ($entry in $vmData) {
 $connectedVCs.Values | ForEach-Object { Disconnect-VIServer -Server $_ -Confirm:$false }
 
 # (Opzionale) Esportazione in CSV
-$result | Export-Csv -Path "\\wp-ctx-fs01\folderredirection$\sqz75768_OURLOTTO\Desktop\export_hot_plug" -NoTypeInformation
+$result | Export-Csv -Path "C:\Users\sqz75768\export_hot_plug" -NoTypeInformation
 
 # Mostra risultati
 $result
@@ -63,10 +68,10 @@ $result
 #            VM1	    vcenter1.local
 #            VM2	    vcenter2.local
 
-#Salva il file con il nome vm_list.xlsx in una directory a tua scelta, ad esempio C:\Scripts\vm_list.xlsx.​
+#Salva il file con il nome vm_list.xlsx in una directory a tua scelta, ad esempio C:\Scripts\vm_list.xlsx.​ 
 
 #Utilizzo nello script PowerShell:
 
 #Assicurati che lo script PowerShell punti al percorso corretto del file Excel.
 
-#Esegui lo script per ottenere le informazioni desiderate sulle VM.
+#Esegui lo script per ottenere le informazioni desiderate sulle VM
