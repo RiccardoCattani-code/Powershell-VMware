@@ -69,10 +69,10 @@ $result
 #Apri Microsoft Excel.
 
 #Inserisci i dati in un excel con due colonne: VMName e vCenter.
-#Esempio:   Colonna1    Colonna2
-#            VMName	    vCenter
-#            VM1	    vcenter1.local
-#            VM2	    vcenter2.local
+#Esempio:   Colonna1    Colonna2        Colonna3                    Colonna4
+#            VMName	    vCenter         username                    password
+#            VM1	    vcenter1.local  administrator@vsphere.local password
+#            VM2	    vcenter2.local  administrator@vsphere.local password
 
 #Salva il file con il nome vm_list.xlsx in una directory a tua scelta, ad esempio C:\Scripts\vm_list.xlsx.​ 
 
