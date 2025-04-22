@@ -2,7 +2,7 @@
 # WARNING: This action is irreversible. Use with caution.
 
 # Login to Azure
-Connect-AzAccount -UseDeviceAuthentication -TenantId 7a475046-0856-478f-b30e-983736def2cd
+Connect-AzAccount -UseDeviceAuthentication -TenantId 
 
 # Get all resource groups in the subscription
 $resourceGroups = Get-AzResourceGroup
