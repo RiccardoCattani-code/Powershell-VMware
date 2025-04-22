@@ -60,3 +60,14 @@ foreach ($vmName in $vms) {
 
 # Disconnessione da tutti i vCenter
 Disconnect-VIServer -Server * -Confirm:$false
+
+#Istruzione per l'uso
+#Qui è necessario compilare i due file di input con i nomi dei vcenter e delle vm
+#Il primo file deve contenere i nomi dei vcenter, uno per riga  
+#Il secondo file deve contenere i nomi delle vm, uno per riga
+#Eseguire lo script in powershell con i permessi di amministratore
+#E' necessario avere installato il modulo VMware PowerCLI
+#E' necessario avere i permessi per eliminare gli snapshot  
+#E' necessario avere i permessi per accedere ai vcenter
+#E' necessario avere i permessi per accedere alle vm
+#E' necessario avere i permessi per accedere agli snapshot
