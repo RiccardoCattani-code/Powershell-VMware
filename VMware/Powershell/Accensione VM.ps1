@@ -1,7 +1,7 @@
 # Connessione all'host ESXi (senza vCenter)
 $securePass = ConvertTo-SecureString "passwordhost" -AsPlainText -Force
 $cred = New-Object System.Management.Automation.PSCredential ("root", $securePass)
-Connect-VIServer -Server "esx01.ourtde.com" -Credential $cred
+Connect-VIServer -Server "esx01.dominio.com" -Credential $cred
 
 
 # Lista delle VM da accendere - da array o da file
