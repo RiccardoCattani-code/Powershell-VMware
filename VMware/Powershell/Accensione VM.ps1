@@ -1,6 +1,8 @@
 # Connessione all'host ESXi (senza vCenter)
-$esxiHost = "esxi01.tuo.dom"
-Connect-VIServer -Server $esxiHost -User "root" -Password "tuapassword"
+$securePass = ConvertTo-SecureString "passwordhost" -AsPlainText -Force
+$cred = New-Object System.Management.Automation.PSCredential ("root", $securePass)
+Connect-VIServer -Server "esx01.ourtde.com" -Credential $cred
+
 
 # Lista delle VM da accendere - da array o da file
 $vmNames = @("VM1", "VM2", "VM3")  # oppure: Get-Content -Path "C:\path\to\vm_list.txt"
