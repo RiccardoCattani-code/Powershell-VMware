@@ -1,8 +1,5 @@
 # Assicurati di avere il modulo ImportExcel
 # Install-Module -Name ImportExcel
-
-
-
 # File Excel con colonne: VMName, vCenter
 $excelPath = "C:\path\to\vm_list.xlsx"
 
@@ -61,7 +58,10 @@ $result
 
 #Apri Microsoft Excel.
 
-#Inserisci i dati come mostrato nella tabella sopra.
+#Inserisci i dati in un excel con due colonne: VMName e vCenter.
+#Esempio:   VMName	    vCenter
+#            VM1	    vcenter1.local
+#            VM2	    vcenter2.local
 
 #Salva il file con il nome vm_list.xlsx in una directory a tua scelta, ad esempio C:\Scripts\vm_list.xlsx.​
 
