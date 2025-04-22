@@ -1,7 +1,7 @@
 # Assicurati di avere il modulo ImportExcel
 # Install-Module -Name ImportExcel
 # File Excel con colonne: VMName, vCenter
-$excelPath = "C:\path\to\vm_list.xlsx"
+$excelPath = "\\wp-ctx-fs01\folderredirection$\sqz75768_OURLOTTO\Desktop\vm_list"
 
 # Caricamento dati dal file Excel
 $vmData = Import-Excel -Path $excelPath
@@ -47,7 +47,7 @@ foreach ($entry in $vmData) {
 $connectedVCs.Values | ForEach-Object { Disconnect-VIServer -Server $_ -Confirm:$false }
 
 # (Opzionale) Esportazione in CSV
-$result | Export-Csv -Path "C:\path\to\hotplug_report.csv" -NoTypeInformation
+$result | Export-Csv -Path "\\wp-ctx-fs01\folderredirection$\sqz75768_OURLOTTO\Desktop\export_hot_plug" -NoTypeInformation
 
 # Mostra risultati
 $result
