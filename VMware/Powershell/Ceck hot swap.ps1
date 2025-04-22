@@ -64,7 +64,8 @@ $result
 #Apri Microsoft Excel.
 
 #Inserisci i dati in un excel con due colonne: VMName e vCenter.
-#Esempio:   VMName	    vCenter
+#Esempio:   Colonna1    Colonna2
+#            VMName	    vCenter
 #            VM1	    vcenter1.local
 #            VM2	    vcenter2.local
 
