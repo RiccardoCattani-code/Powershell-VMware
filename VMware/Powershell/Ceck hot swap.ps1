@@ -1,6 +1,8 @@
 # Assicurati di avere il modulo ImportExcel
 # Install-Module -Name ImportExcel
 
+
+
 # File Excel con colonne: VMName, vCenter
 $excelPath = "C:\path\to\vm_list.xlsx"
 
@@ -52,3 +54,19 @@ $result | Export-Csv -Path "C:\path\to\hotplug_report.csv" -NoTypeInformation
 
 # Mostra risultati
 $result
+
+
+#📌 Istruzioni per l'uso:
+#Creazione del file Excel:
+
+#Apri Microsoft Excel.
+
+#Inserisci i dati come mostrato nella tabella sopra.
+
+#Salva il file con il nome vm_list.xlsx in una directory a tua scelta, ad esempio C:\Scripts\vm_list.xlsx.​
+
+#Utilizzo nello script PowerShell:
+
+#Assicurati che lo script PowerShell punti al percorso corretto del file Excel.
+
+#Esegui lo script per ottenere le informazioni desiderate sulle VM.
