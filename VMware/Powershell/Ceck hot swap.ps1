@@ -75,9 +75,11 @@ $result
 #            VM2	    vcenter2.local  administrator@vsphere.local password
 
 #Salva il file con il nome vm_list.xlsx in una directory a tua scelta, ad esempio C:\Scripts\vm_list.xlsx.​ 
+#Questo file viene usato sia per le lista delle VM e dove si trovano sia per le relative credenziali del vcenter
 
 #Utilizzo nello script PowerShell:
 
 #Assicurati che lo script PowerShell punti al percorso corretto del file Excel.
 
 #Esegui lo script per ottenere le informazioni desiderate sulle VM
+#Qui il login al vcenter vien efatto attraverso il file

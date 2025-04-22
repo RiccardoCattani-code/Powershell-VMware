@@ -21,3 +21,6 @@ foreach ($vmName in $vmNames) {
 
 # Disconnessione
 Disconnect-VIServer -Confirm:$false
+
+#Istruzioni per script 
+#Questo script funziona senza file e l'autenticazione va bene così
