@@ -6,7 +6,7 @@ if (-not (Get-Module -ListAvailable -Name ImportExcel)) {
 # Assicurati di avere il modulo ImportExcel
 # Install-Module -Name ImportExcel
 # File Excel con colonne: VMName, vCenter
-$excelPath = "C:\Users\sqz75768\vm_list"
+$excelPath = "C:\Users\sqz75768\vm_list.xlsx"
 
 # Caricamento dati dal file Excel
 $vmData = Import-Excel -Path $excelPath
