@@ -1,0 +1,13 @@
+
+#Utility
+# Eseguire il comando seguente, sostituendo {ID sottoscrizione} con quello copiato nel passaggio precedente. 
+#Questo comando modifica la sottoscrizione attiva impostandola sulla Sottoscrizione
+
+$context = Get-AzSubscription -SubscriptionId Your subscription ID
+Set-AzContext $context
+
+
+# Eseguire il comando seguente sostituendo {ID sottoscrizione} con quello copiato nel passaggio precedente.
+#Questo comando modifica la sottoscrizione attiva impostandola sulla Sottoscrizione con l'ID messo prima
+
+Set-AzDefault -ResourceGroupName learn-1edf2b36-be7e-48e5-a571-1181f482041d
