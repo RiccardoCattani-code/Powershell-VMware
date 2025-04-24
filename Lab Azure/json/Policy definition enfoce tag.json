@@ -1,0 +1,51 @@
+//This is an Azure Policy definition that enforces the presence of a specific tag on resources.
+//The policy denies the creation of resources that do not have the specified tag
+
+{
+  "properties": {
+    "displayName": "Imponi tag sulla risorsa",
+    "policyType": "Custom",
+    "mode": "Indexed",
+    "description": "Questo criterio impone la presenza di un tag su una risorsa.",
+    "metadata": {
+      "category": "General",
+      "createdBy": "c01a6c4f-8be2-4412-8146-338377d351b8",
+      "createdOn": "2025-04-24T21:01:05.2752478Z",
+      "updatedBy": null,
+      "updatedOn": null
+    },
+    "version": "1.0.0",
+    "parameters": {
+      "tagName": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Name",
+          "description": "Name of the tag, such as 'environment'"
+        }
+      }
+    },
+    "policyRule": {
+      "if": {
+        "field": "[concat('tags[', parameters('tagName'), ']')]",
+        "exists": "false"
+      },
+      "then": {
+        "effect": "deny"
+      }
+    },
+    "versions": [
+      "1.0.0"
+    ]
+  },
+  "id": "/subscriptions/ebe95d37-01bc-4988-ad84-7887e5cfa866/providers/Microsoft.Authorization/policyDefinitions/61c50d6f-86e1-4316-ae4b-63f4a2a8d733",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "name": "61c50d6f-86e1-4316-ae4b-63f4a2a8d733",
+  "systemData": {
+    "createdBy": "riccardocattani@outlook.it",
+    "createdByType": "User",
+    "createdAt": "2025-04-24T21:01:05.1828032Z",
+    "lastModifiedBy": "riccardocattani@outlook.it",
+    "lastModifiedByType": "User",
+    "lastModifiedAt": "2025-04-24T21:01:05.1828032Z"
+  }
+}
