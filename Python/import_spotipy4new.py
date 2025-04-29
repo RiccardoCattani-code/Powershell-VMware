@@ -20,6 +20,7 @@ CLIENT_ID = "40b24bfe376749b09b68c9a8eba1510bENV"
 CLIENT_SECRET = "40afb06a9e2040bbb6a65d610d37a967ENV"
 REDIRECT_URI = "http://127.0.0.1:8000/callback"  # la tua porta
 SCOPE = "user-read-playback-state user-modify-playback-state user-library-read playlist-modify-public playlist-modify-private playlist-read-private"
+
 TIMER = 6  # intervallo di controllo in secondi
 BASE_PLAYLIST_NAME = "Nuove Scoperte"
 
