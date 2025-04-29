@@ -1,3 +1,16 @@
+#Riccardo Cattani
+#29/04/2024
+# Per utilizzare questo script, è necessario installare la libreria Spotipy e configurare le credenziali di accesso a Spotify
+# Assicurati di avere le autorizzazioni corrette per accedere alle playlist e alla cronologia di riproduzione
+# Per installare Spotipy, esegui: pip install spotipy       
+# Per configurare le credenziali di accesso a Spotify, segui le istruzioni qui: https://spotipy.readthedocs.io/en/2.22.1/#authorization-code-flow
+# Assicurati di avere un'applicazione Spotify registrata e di avere le credenziali CLIENT_ID, CLIENT_SECRET e REDIRECT_URI  
+# Utilizza la libreria Spotipy per interagire con l'API di Spotify  
+# Script per Spotify che salva i brani in una playlist quando vengono riprodotti, evitando duplicati
+# La playlist viene creata se non esiste già e arrivata a 999 brani, viene creata una nuova playlist con un numero progressivo
+# Quando viene riprodotto un bravo già presenta in qualsiasi plalist viene skippato 
+
+
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import time
